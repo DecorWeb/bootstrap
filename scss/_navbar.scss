@@ -75,11 +75,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-
-  .dropdown-menu {
-    position: static;
-    float: none;
-  }
 }
 
 
@@ -141,6 +136,11 @@
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
+        .dropdown-menu {
+          position: static;
+          float: none;
+        }
+
         > .container,
         > .container-fluid {
           padding-right: 0;
@@ -155,10 +155,6 @@
 
         .navbar-nav {
           flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
 
           .dropdown-menu-right {
             right: 0;
